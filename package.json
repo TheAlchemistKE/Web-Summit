@@ -1,0 +1,30 @@
+{
+  "name": "web-summit",
+  "version": "1.0.0",
+  "description": "This is my capstone project. I will be building a Web Conference Landing Page using HTML, CSS and JS.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KelynPNjeri/Web-Summit.git"
+  },
+  "keywords": [
+    "capstone",
+    "Web",
+    "summit"
+  ],
+  "author": "Kelyn Paul Njeri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KelynPNjeri/Web-Summit/issues"
+  },
+  "homepage": "https://github.com/KelynPNjeri/Web-Summit#readme",
+  "devDependencies": {
+    "hint": "^6.0.6",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.17.2"
+  }
+}
