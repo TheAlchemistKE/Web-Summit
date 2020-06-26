@@ -164,5 +164,14 @@ body {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
+
+    h1 {
+        font-family: $font-secondary;
+    }
+
+    .copyright {
+        font-size: 14px;
+        font-weight: bold;
+    }
   }
 }
