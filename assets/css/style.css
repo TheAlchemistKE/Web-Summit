@@ -59,9 +59,41 @@ body {
   text-transform: uppercase;
 }
 
+.past-events {
+  padding: 40px;
+}
+
+.past-events p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.past-events .event-carousel {
+  width: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+}
+
+.past-events .event-carousel a {
+  padding: 100px 50px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #ec5242;
+  margin: 5px;
+  text-align: center;
+}
+
+.past-events .event-carousel a .year {
+  font-size: 22px;
+}
+
 .landing-page {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(../images/background.jpg) center center;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../images/background.jpg) center center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.9))), url(../images/background.jpg) center center;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url(../images/background.jpg) center center;
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
@@ -80,27 +112,41 @@ body {
           align-items: center;
 }
 
+.landing-page .contact {
+  font-size: 20px;
+}
+
+.landing-page .contact a {
+  text-decoration: underline;
+  color: #272a31;
+}
+
+.landing-page .contact a:hover {
+  color: #ec5242;
+}
+
 .landing-page .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 5vh;
+  top: 0;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 10vh;
+  background-color: #fff;
 }
 
 .landing-page .navbar h4 {
   font-family: "Playfair Display", serif;
   color: #ec5242;
   font-size: 22px;
+  padding-left: 30px;
 }
 
 .landing-page .navbar .navlinks {
@@ -140,12 +186,18 @@ body {
 }
 
 .landing-page .landing-page-text p:nth-child(1) {
-  font-size: 48px;
+  font-size: 64px;
   font-family: "Playfair Display", serif;
   font-weight: bold;
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+.landing-page .about-text {
+  border: 1px solid #272a31;
+  background-color: #fff;
+  padding: 20px 40px;
 }
 
 .featured-speakers {
@@ -201,8 +253,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -215,5 +268,44 @@ body {
 .home-footer .footer-items .copyright {
   font-size: 14px;
   font-weight: bold;
+}
+
+.footer {
+  background-color: #272a31;
+  color: #d3d3d3;
+  padding: 30px;
+}
+
+.about-us {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 40px;
+  -webkit-box-shadow: 0 0 2px 0 #272a31;
+          box-shadow: 0 0 2px 0 #272a31;
+}
+
+.about-us .content {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.about-us .content h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-style: italic;
+  padding: 15px 10px;
+  border: 1px solid #272a31;
+  width: 50%;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

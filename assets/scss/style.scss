@@ -58,8 +58,38 @@ body {
   }
 }
 
+.past-events {
+  padding: 40px;
+
+  p {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .event-carousel {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+
+    a {
+      padding: 100px 50px;
+      text-decoration: none;
+      color: $color-white;
+      font-weight: bold;
+      background-color: $color-secondary;
+      margin: 5px;
+      text-align: center;
+
+      .year {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
 .landing-page {
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../images/background.jpg) center center;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url(../images/background.jpg) center center;
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
@@ -68,19 +98,34 @@ body {
   justify-content: center;
   align-items: center;
 
+  .contact {
+    font-size: 20px;
+
+    a {
+      text-decoration: underline;
+      color: $color-primary;
+    }
+
+    a:hover {
+      color: $color-secondary;
+    }
+  }
+
   .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 5vh;
+    top: 0;
     width: 100%;
-    height: fit-content;
+    height: 10vh;
+    background-color: #fff;
 
     h4 {
       font-family: $font-secondary;
       color: $color-secondary;
       font-size: 22px;
+      padding-left: 30px;
     }
 
     .navlinks {
@@ -116,13 +161,20 @@ body {
     line-height: 1.7;
 
     p:nth-child(1) {
-      font-size: 48px;
+      font-size: 64px;
       font-family: $font-secondary;
       font-weight: bold;
+      //   text-transform: uppercase;
       margin: 0;
       padding: 0;
       text-align: center;
     }
+  }
+
+  .about-text {
+    border: 1px solid $color-primary;
+    background-color: #fff;
+    padding: 20px 40px;
   }
 }
 
@@ -162,7 +214,7 @@ body {
   .footer-items {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     h1 {
@@ -172,6 +224,37 @@ body {
     .copyright {
       font-size: 14px;
       font-weight: bold;
+    }
+  }
+}
+
+.footer {
+  background-color: $color-primary;
+  color: $color-tertiary;
+  padding: 30px;
+}
+
+.about-us {
+  height: fit-content;
+  padding: 40px;
+  box-shadow: 0 0 2px 0 $color-primary;
+
+  .content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    line-height: 1.8;
+    font-size: 18px;
+
+    h3 {
+      display: flex;
+      flex-direction: column;
+      font-style: italic;
+      padding: 15px 10px;
+      border: 1px solid $color-primary;
+      width: 50%;
+      margin: 0 auto;
     }
   }
 }
