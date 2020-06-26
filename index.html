@@ -1,43 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Summit</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navBar d-flex flex-row justify-content-between align-items-center sticky-top p-3">
-            <h2 class="text-white align-self-center p-0 m-0">Summit</h2>
-            <ul class="navlinks d-flex flex-row justify-content-center align-items-center">
-                <li class="navlink pl-3 text-white"><a href="#">Home</a></li>
-                <li class="navlink pl-3"><a href="#">About</a></li>
-                <li class="navlink pl-3"><a href="#">Tickets</a></li>
+    <header class="landing-page">
+        <!-- <div class="upper-nav">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </div> -->
+        <nav class="navbar">
+            <h4>Navbar Logo</h4>
+            <ul class="navlinks">
+                <li class="navlink active"><a href="#">Home</a></li>
+                <li class="navlink"><a href="#">About</a></li>
+                <li class="navlink"><a href="#">Tickets</a></li>
             </ul>
         </nav>
-        <div class="landing-page">
-            <video class="background-video" autoplay playinline muted loop preload>
-                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
-            </video>
-            <svg id="landing-text" height="100%" width="100%">
-                <defs>
-                    <mask id="mask" x="0" y="0" height="100%" width="100%">
-                        <rect x="0" y="0" height="100%" width="100%"/>
-                        <text x="50%" y="50%" fill="#EC5242" text-anchor="middle">Web Summit</text>
-                    </mask>
-                </defs>
-                <rect x="0" y="0" height="100%" width="100%"/>
-            </svg>
+        <div class="landing-page-text">
+            <p>Web Summit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quo, voluptas consequatur libero ducimus enim quos unde nihil, perferendis ad saepe laborum. Porro tenetur, quaerat quas obcaecati excepturi nihil aut!</p>
         </div>
-
     </header>
+    <section class="main-program">
+        <h2 class="section-title">Main Program</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="./assets/images/" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea obcaecati ab sunt corrupti fugit suscipit optio voluptas quaerat dolorum perspiciatis accusamus nulla, consectetur amet dolores id molestias blanditiis numquam.</p>
+            </div>
+            <div class="card">
+                <img src="./assets/images/" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea obcaecati ab sunt corrupti fugit suscipit optio voluptas quaerat dolorum perspiciatis accusamus nulla, consectetur amet dolores id molestias blanditiis numquam.</p>
+            </div>
+            <div class="card">
+                <img src="./assets/images/" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea obcaecati ab sunt corrupti fugit suscipit optio voluptas quaerat dolorum perspiciatis accusamus nulla, consectetur amet dolores id molestias blanditiis numquam.</p>
+            </div>
+            <div class="card">
+                <img src="./assets/images/" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea obcaecati ab sunt corrupti fugit suscipit optio voluptas quaerat dolorum perspiciatis accusamus nulla, consectetur amet dolores id molestias blanditiis numquam.</p>
+            </div>
+        </div>
+        <a href="#">See the Whole Program</a>
+        
+    </section>
+    <section class="featured-speakers">
+        <h2 class="section-title">Featured Speakers</h2>
+        <div class="speaker-grid">
+            <div class="speaker-card">
+                <img src="./assets/images/" alt="">
+                <div class="speaker-info">
+                    <h5>Name</h5>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis, debitis culpa officia sed voluptatum fuga illo consectetur soluta praesentium minus, dignissimos numquam, ducimus tempore!</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <img src="./assets/images/" alt="">
+                <div class="speaker-info">
+                    <h5>Name</h5>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis, debitis culpa officia sed voluptatum fuga illo consectetur soluta praesentium minus, dignissimos numquam, ducimus tempore!</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <img src="./assets/images/" alt="">
+                <div class="speaker-info">
+                    <h5>Name</h5>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis, debitis culpa officia sed voluptatum fuga illo consectetur soluta praesentium minus, dignissimos numquam, ducimus tempore!</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <img src="./assets/images/" alt="">
+                <div class="speaker-info">
+                    <h5>Name</h5>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis, debitis culpa officia sed voluptatum fuga illo consectetur soluta praesentium minus, dignissimos numquam, ducimus tempore!</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <img src="./assets/images/" alt="">
+                <div class="speaker-info">
+                    <h5>Name</h5>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis, debitis culpa officia sed voluptatum fuga illo consectetur soluta praesentium minus, dignissimos numquam, ducimus tempore!</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <img src="./assets/images/" alt="">
+                <div class="speaker-info">
+                    <h5>Name</h5>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis, debitis culpa officia sed voluptatum fuga illo consectetur soluta praesentium minus, dignissimos numquam, ducimus tempore!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sponsors">
+        <h2 class="section-title">Program Sponsors</h2>
+        <div class="program-sponsors">
+            <img src="./assets/images/jetbrains.svg" alt="">
+            <img src="./assets/images/jetbrains.svg" alt="">
+            <img src="./assets/images/jetbrains.svg" alt="">
+            <img src="./assets/images/jetbrains.svg" alt="">
+        </div>  
+    </section>
+    <footer class="home-footer">
+        <div class="footer-items">
+            <h1>Page Logo</h1>
+            <p>
+                <script>
+                    document.write(
+                        new Date().getFullYear()
+                    );
+                </script>
+                Web Summit. Some right reserved.
+            </p>
+        </div>
+    </footer>
     
-    
-    <script src="./assets/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>

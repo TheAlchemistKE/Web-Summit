@@ -1,96 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 $color-primary: #272a31;
 $color-secondary: #ec5242;
 $color-tertiary: #d3d3d3;
+$color-white: #fff;
+$text-color: #000;
 
-$font-svg: 'Montserrat', sans-serif;
-$font-secondary: 'Playfair Display', serif;
-$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Playfair Display',
+  serif;
+$font-primary: 'Lato',
+  sans-serif;
 
 body {
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  max-width: 100% !important;
-}
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-nav {
-    background-color: $color-secondary;
-    font-family: $font-secondary;
-
-    h2 {
-        font-family: $font-secondary;
-        font-size: 32px;
-        color: $color-tertiary;
-    }
-    ul {
-        list-style-type: none;
-        li {
-            a {
-                color: $color-tertiary;
-                font-size: 18px;
-                font-weight: bold;
-            }
-
-            a:hover {
-                text-decoration: underline;
-                color: $color-tertiary;
-            }
-        }
-    }
-
-
-}
-.landing-page {
-    width: 100%;
-    position: relative;
-    top: 0;
-}
-#landing-text {
-  font-family: $font-svg;
-  font-size: 8em;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: block;
-  margin: 0 auto;
-  transition: 1s font-size;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  font-family: $font-primary;
+  color: $text-color;
 }
 
-#landing-text rect {
-  fill: white;
-  mask: url(#mask);
+.section-title {
+  font-family: $font-secondary;
+  text-decoration: underline;
+  text-decoration-color: $color-secondary;
+  text-align: center;
 }
 
-#landing-text > rect {
-  fill: $color-secondary;
-}
+.main-program {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary;
+  color: $color-tertiary;
+  padding: 40px;
 
-.background-video {
-  width: 100%;
-  height: 80%;
-}
+  h2 {
+    margin-top: -40px;
+    text-align: center;
+  }
 
+  .grid {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+  }
 
-
-// MEDIA QUERIES.
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-  #landing-text {
-    font-size: 2em;
+  a {
+    padding-top: 40px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: inherit;
+    text-transform: uppercase;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  #landing-text {
-    font-size: 4em;
+.landing-page {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../images/background.jpg) center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+    height: fit-content;
+
+    h4 {
+      font-family: $font-secondary;
+      color: $color-secondary;
+      font-size: 22px;
+    }
+
+    .navlinks {
+      display: flex;
+      justify-content: space-evenly;
+      list-style-type: none;
+
+      .navlink {
+        padding: 5px 0;
+
+        a {
+          padding: 10px 20px;
+          font-family: $font-secondary;
+          text-decoration: none;
+          color: $color-primary;
+          font-weight: bold;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .active {
+        border: 1px solid $color-primary;
+      }
+    }
+  }
+
+  .landing-page-text {
+    width: 50%;
+    text-align: justify;
+    line-height: 1.7;
+
+    p:nth-child(1) {
+      font-size: 48px;
+      font-family: $font-secondary;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
+.featured-speakers {
+  padding: 20px;
+  background-color: $color-tertiary;
+
+  .speaker-grid {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sponsors {
+  background-color: $color-primary;
+  height: 40vh;
+  padding: 20px;
+
+  h2 {
+    color: $color-tertiary;
+  }
+
+  .program-sponsors {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+  }
+}
+
+.home-footer {
+  background-color: $color-tertiary;
+
+  .footer-items {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
   }
 }
