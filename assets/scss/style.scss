@@ -29,7 +29,7 @@ body {
 .main-program {
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 80vh;
   justify-content: center;
   align-items: center;
   background-color: $color-primary;
@@ -43,10 +43,30 @@ body {
 
   .grid {
     width: 75%;
-    margin: 0 auto;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
+
+    .card {
+      padding: 20px 40px;
+      border: 1px solid #ccc;
+      text-align: center;
+
+      i {
+        font-size: 32px;
+      }
+
+      .title {
+        color: $color-secondary;
+        font-weight: bold;
+      }
+    }
+
+    .card:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
   }
 
   a {
@@ -55,6 +75,44 @@ body {
     text-decoration: underline;
     color: inherit;
     text-transform: uppercase;
+  }
+
+  a:hover {
+    color: $color-secondary;
+  }
+}
+
+table {
+  margin-top: 20px;
+  margin-left: -100px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $color-white;
+  border-image-slice: 0 12 0 12;
+  border-image-width: 0 12px 0 12px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: repeat repeat;
+  border-image-source: url("https://mdn.mozillademos.org/files/6015/border-image-5.png");
+
+  td,
+  th {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 10px;
+  }
+
+  tr:nth-child(1) {
+    background-color: $color-tertiary;
+  }
+
+  tr > td {
+    white-space: nowrap;
+    padding: 10px 30px;
+
+    p {
+      font-size: 18px !important;
+      color: $color-secondary;
+    }
   }
 }
 
@@ -190,49 +248,61 @@ body {
   }
 }
 
-.ticket-sale {
-  margin-top: -50px;
+.inline {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid $color-primary;
+  border-radius: 60px;
+  margin-top: 20px;
 
-  .inline {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    border: 1px solid $color-primary;
-    border-radius: 60px;
-    margin-top: 20px;
-
-    li {
-      color: $color-secondary;
-      text-transform: uppercase;
-    }
+  li {
+    color: $color-secondary;
+    text-transform: uppercase;
   }
 }
 
-table {
-  margin: 25px;
-  width: 100%;
-  border-collapse: collapse;
-  background-color: $color-white;
-  padding: 40px;
+.lunch-option {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 30px auto;
+  border: 1px solid #ccc;
 
-  td,
-  th {
-    border: 1px solid #ccc;
-    text-align: left;
-    padding: 10px;
-  }
-
-  tr:nth-child(1) {
+  .lunch-title {
     background-color: $color-tertiary;
+    font-family: $font-secondary;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 10px;
+    margin: 0;
   }
+}
 
-  tr > td {
-    white-space: nowrap;
+.meals {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .meal {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
   }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .smaller {
@@ -259,6 +329,7 @@ table {
 
 .home-footer {
   background-color: $color-tertiary;
+  padding: 20px;
 
   .footer-items {
     display: flex;
@@ -287,6 +358,10 @@ table {
   height: fit-content;
   padding: 40px;
   box-shadow: 0 0 2px 0 $color-primary;
+
+  .inline {
+    width: 50%;
+  }
 
   .content {
     width: 50%;

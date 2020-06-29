@@ -23,7 +23,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 60vh;
+  height: 80vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -42,7 +42,7 @@ body {
 
 .main-program .grid {
   width: 75%;
-  margin: 0 auto;
+  margin: 20px auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -51,12 +51,70 @@ body {
           column-gap: 10px;
 }
 
+.main-program .grid .card {
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.main-program .grid .card i {
+  font-size: 32px;
+}
+
+.main-program .grid .card .title {
+  color: #ec5242;
+  font-weight: bold;
+}
+
+.main-program .grid .card:hover {
+  background-color: #fff;
+  color: #272a31;
+}
+
 .main-program a {
   padding-top: 40px;
   font-size: 20px;
   text-decoration: underline;
   color: inherit;
   text-transform: uppercase;
+}
+
+.main-program a:hover {
+  color: #ec5242;
+}
+
+table {
+  margin-top: 20px;
+  margin-left: -100px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-image-slice: 0 12 0 12;
+  border-image-width: 0 12px 0 12px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: repeat repeat;
+  border-image-source: url("https://mdn.mozillademos.org/files/6015/border-image-5.png");
+}
+
+table td,
+table th {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 10px;
+}
+
+table tr:nth-child(1) {
+  background-color: #d3d3d3;
+}
+
+table tr > td {
+  white-space: nowrap;
+  padding: 10px 30px;
+}
+
+table tr > td p {
+  font-size: 18px !important;
+  color: #ec5242;
 }
 
 .past-events {
@@ -215,11 +273,7 @@ body {
       grid-template-columns: repeat(2, 1fr);
 }
 
-.ticket-sale {
-  margin-top: -50px;
-}
-
-.ticket-sale .inline {
+.inline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,31 +295,80 @@ body {
   margin-top: 20px;
 }
 
-.ticket-sale .inline li {
+.inline li {
   color: #ec5242;
   text-transform: uppercase;
 }
 
-table {
-  margin: 25px;
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  padding: 40px;
-}
-
-table td, table th {
+.lunch-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 30px auto;
   border: 1px solid #ccc;
-  text-align: left;
-  padding: 10px;
 }
 
-table tr:nth-child(1) {
+.lunch-option .lunch-title {
   background-color: #d3d3d3;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px 10px;
+  margin: 0;
 }
 
-table tr > td {
-  white-space: nowrap;
+.meals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.meals .meal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .smaller {
@@ -301,6 +404,7 @@ table tr > td {
 
 .home-footer {
   background-color: #d3d3d3;
+  padding: 20px;
 }
 
 .home-footer .footer-items {
@@ -341,6 +445,10 @@ table tr > td {
   padding: 40px;
   -webkit-box-shadow: 0 0 2px 0 #272a31;
           box-shadow: 0 0 2px 0 #272a31;
+}
+
+.about-us .inline {
+  width: 50%;
 }
 
 .about-us .content {
