@@ -97,7 +97,7 @@ table {
   td,
   th {
     border: 1px solid #ccc;
-    text-align: left;
+    text-align: center;
     padding: 10px;
   }
 
@@ -190,6 +190,7 @@ table {
       display: flex;
       justify-content: space-evenly;
       list-style-type: none;
+      padding: 0 20px;
 
       .navlink {
         padding: 5px 0;
@@ -245,6 +246,41 @@ table {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    .speaker-card {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 30px 10px;
+
+      img {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+
+      .speaker-info {
+        margin: 0;
+        padding: 0;
+
+        h5,
+        p {
+          margin: 0;
+          padding: 0;
+        }
+
+        h5 {
+          padding: 10px 0;
+        }
+
+        p:nth-child(even) {
+          color: $color-secondary;
+          font-weight: bold;
+          padding: 5px 0;
+        }
+      }
+    }
   }
 }
 
@@ -384,8 +420,8 @@ table {
 }
 
 @media only screen and (max-width: 768px) {
-  nav {
-    display: none;
+  .navbar {
+    display: none !important;
   }
 }
 
