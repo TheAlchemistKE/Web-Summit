@@ -7,6 +7,18 @@ body {
   color: #000;
 }
 
+.show {
+  display: none !important;
+}
+
+.ticket-group {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
 .section-title {
   font-family: "Playfair Display", serif;
   text-decoration: underline;
@@ -89,11 +101,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
-  border-image-slice: 0 12 0 12;
-  border-image-width: 0 12px 0 12px;
-  border-image-outset: 0 0 0 0;
-  border-image-repeat: repeat repeat;
-  border-image-source: url("https://mdn.mozillademos.org/files/6015/border-image-5.png");
 }
 
 table td,
@@ -140,7 +147,11 @@ table tr > td p {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  background-color: #ec5242;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec5342a1), to(#ec5342ea)), url(../images/conference1.jpeg) center center;
+  background: linear-gradient(#ec5342a1, #ec5342ea), url(../images/conference1.jpeg) center center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 5px;
   text-align: center;
 }
@@ -292,7 +303,6 @@ table tr > td p {
 }
 
 .featured-speakers .speaker-grid .speaker-card img {
-  width: 200px;
   height: 200px;
   margin: 10px;
 }
@@ -302,13 +312,15 @@ table tr > td p {
   padding: 0;
 }
 
-.featured-speakers .speaker-grid .speaker-card .speaker-info h5, .featured-speakers .speaker-grid .speaker-card .speaker-info p {
+.featured-speakers .speaker-grid .speaker-card .speaker-info h5,
+.featured-speakers .speaker-grid .speaker-card .speaker-info p {
   margin: 0;
   padding: 0;
 }
 
 .featured-speakers .speaker-grid .speaker-card .speaker-info h5 {
   padding: 10px 0;
+  font-size: 16px;
 }
 
 .featured-speakers .speaker-grid .speaker-card .speaker-info p:nth-child(even) {
@@ -519,14 +531,398 @@ table tr > td p {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 765px) {
+  body {
+    overflow-x: hidden;
+  }
   .navbar {
-    display: none !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative !important;
+    top: 0;
+    width: 100%;
+    height: 10vh !important;
+    background-color: #fff;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    padding: 5px;
+  }
+  .navbar .menu {
+    color: #000;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    display: inline-block;
+  }
+  .navbar h4 {
+    font-family: "Playfair Display", serif;
+    color: #ec5242;
+    font-size: 22px;
+    padding-left: 30px;
+  }
+  .navbar .navlinks {
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    top: 70px;
+    text-align: center;
+  }
+  .navbar .navlinks .navlink {
+    padding: 5px 0;
+    display: block;
+  }
+  .navbar .navlinks .navlink a {
+    padding: 10px 20px;
+    font-family: "Playfair Display", serif;
+    text-decoration: none;
+    color: #272a31;
+    font-weight: bold;
+  }
+  .navbar .navlinks .navlink a:hover {
+    color: #ec5242;
+    font-weight: bold;
+  }
+  .navbar .navlinks .active {
+    border: 1px solid #272a31;
+  }
+  .sponsors {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .program-sponsors {
+    display: -ms-grid !important;
+    display: grid !important;
+    row-gap: 20px;
+  }
+  .featured-speakers,
+  .speaker-grid,
+  .content,
+  .event-carousel {
+    width: 100% !important;
+    padding: 20px 0;
+  }
+  .main-program,
+  .featured-speakers {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .main-program .grid,
+  .main-program .speaker-grid,
+  .featured-speakers .grid,
+  .featured-speakers .speaker-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .main-program .grid .card,
+  .main-program .speaker-grid .card,
+  .featured-speakers .grid .card,
+  .featured-speakers .speaker-grid .card {
+    margin: 10px 0;
+  }
+  .speaker-card {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .speaker-card .jake {
+    width: 150px;
+  }
+  .speaker-card img {
+    height: 150px !important;
+    margin: 0;
+  }
+  .footer-items {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .landing-page {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .ticket-sale {
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+  }
+  .ticket-sale table {
+    width: 100% !important;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  .ticket-sale table td,
+  .ticket-sale table th {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+  }
+  .ticket-sale table tr:nth-child(1) {
+    background-color: #d3d3d3;
+  }
+  .ticket-sale table tr > td {
+    white-space: nowrap;
+    padding: 10px;
+  }
+  .ticket-sale table tr > td p {
+    font-size: 18px !important;
+    color: #ec5242;
+  }
+  .ticket-sale .ticket-group {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ticket-sale .ticket-group table {
+    width: 80% !important;
+    margin: 20px auto;
+  }
+  .landing-page-text {
+    width: 100% !important;
+    text-align: justify;
+    line-height: 1.7;
+  }
+  .landing-page-text p:nth-child(1) {
+    font-size: 64px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .event-carousel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .ticket-table {
+    display: none;
+  }
+  .meal-plan {
+    padding: 10px 0;
+    margin: 0;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  nav {
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative !important;
+    top: 0;
+    width: 100%;
+    height: 20vh !important;
+    background-color: #fff;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    padding: 5px;
+  }
+  .navbar .menu {
+    color: #000;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    display: inline-block;
+  }
+  .navbar h4 {
+    font-family: "Playfair Display", serif;
+    color: #ec5242;
+    font-size: 22px;
+    padding-left: 30px;
+  }
+  .navbar .navlinks {
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    top: 70px;
+    text-align: center;
+  }
+  .navbar .navlinks .navlink {
+    padding: 5px 0;
+    display: block;
+  }
+  .navbar .navlinks .navlink a {
+    padding: 10px 20px;
+    font-family: "Playfair Display", serif;
+    text-decoration: none;
+    color: #272a31;
+    font-weight: bold;
+  }
+  .navbar .navlinks .navlink a:hover {
+    color: #ec5242;
+    font-weight: bold;
+  }
+  .navbar .navlinks .active {
+    border: 1px solid #272a31;
+  }
+  .sponsors {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .program-sponsors {
+    display: -ms-grid !important;
+    display: grid !important;
+    row-gap: 20px;
+  }
+  .featured-speakers,
+  .speaker-grid,
+  .content,
+  .event-carousel {
+    width: 100% !important;
+    padding: 20px 0;
+  }
+  .main-program,
+  .featured-speakers {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .main-program .grid,
+  .main-program .speaker-grid,
+  .featured-speakers .grid,
+  .featured-speakers .speaker-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .main-program .grid .card,
+  .main-program .speaker-grid .card,
+  .featured-speakers .grid .card,
+  .featured-speakers .speaker-grid .card {
+    margin: 10px 0;
+  }
+  .speaker-card {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .speaker-card .jake {
+    width: 150px;
+  }
+  .speaker-card img {
+    height: 150px !important;
+    margin: 0;
+  }
+  .footer-items {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .landing-page {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .ticket-sale {
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+  }
+  .ticket-sale table {
+    width: 600px !important;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  .ticket-sale table td,
+  .ticket-sale table th {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+  }
+  .ticket-sale table tr:nth-child(1) {
+    background-color: #d3d3d3;
+  }
+  .ticket-sale table tr > td {
+    white-space: nowrap;
+    padding: 10px;
+  }
+  .ticket-sale table tr > td p {
+    font-size: 18px !important;
+    color: #ec5242;
+  }
+  .landing-page-text {
+    width: 60% !important;
+    text-align: justify;
+    line-height: 1.7;
+  }
+  .landing-page-text p:nth-child(1) {
+    font-size: 64px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .event-carousel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .ticket-group {
     display: none;
   }
 }
