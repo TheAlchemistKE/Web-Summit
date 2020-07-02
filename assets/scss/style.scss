@@ -230,7 +230,7 @@ table {
     text-align: justify;
     line-height: 1.7;
 
-    p:nth-child(1) {
+    h1 {
       font-size: 64px;
       font-family: $font-secondary;
       font-weight: bold;
@@ -245,6 +245,9 @@ table {
     background-color: #fff;
     padding: 20px 40px;
   }
+}
+.heading {
+  
 }
 
 .featured-speakers {
