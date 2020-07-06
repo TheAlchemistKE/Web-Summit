@@ -15,6 +15,10 @@ body {
   display: none;
 }
 
+.menu {
+  display: none;
+}
+
 .section-title {
   font-family: "Playfair Display", serif;
   text-decoration: underline;
@@ -92,11 +96,11 @@ body {
 }
 
 table {
-  margin-top: 20px;
-  margin-left: -100px;
-  width: 100%;
+  margin: 20px 50px 10px;
+  width: 80%;
   border-collapse: collapse;
   background-color: #fff;
+  table-layout: fixed;
 }
 
 table td,
@@ -156,72 +160,60 @@ table tr > td p {
   font-size: 22px;
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #fff;
-}
-
-a:hover {
-  color: slateblue;
-  text-decoration: underline;
-}
-
-label {
-  font-size: 20px;
-  padding: 0 10px;
-}
-
-nav {
-  color: #fff;
-  width: 100%;
-  height: 5%;
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #34495e;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
 }
 
-nav .navlinks {
+.navbar h4 {
+  font-family: "Playfair Display", serif;
+  color: #ec5242;
+  font-size: 22px;
+  padding-left: 30px;
+}
+
+.navbar .navlinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav .navlinks li {
+  list-style-type: none;
   padding: 0 20px;
 }
 
-nav .navlinks li a {
-  white-space: nowrap;
+.navbar .navlinks .navlink {
+  padding: 5px 0;
 }
 
-nav .icon {
-  display: none;
+.navbar .navlinks .navlink a {
+  padding: 10px 20px;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  color: #272a31;
+  font-weight: bold;
+}
+
+.navbar .navlinks .navlink a:hover {
+  color: #ec5242;
+  font-weight: bold;
+}
+
+.navbar .navlinks .active {
+  border: 1px solid #272a31;
 }
 
 .landing-page {
@@ -230,8 +222,6 @@ nav .icon {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
-  position: relative;
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,14 +251,14 @@ nav .icon {
 }
 
 .landing-page .landing-page-text {
-  width: 50%;
+  width: 60%;
   text-align: justify;
   line-height: 1.7;
 }
 
 .landing-page .landing-page-text h1 {
   font-size: 64px;
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif !important;
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -354,7 +344,7 @@ nav .icon {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  width: 80%;
+  width: 40%;
   margin: 0 auto;
   border: 1px solid #272a31;
   border-radius: 60px;
@@ -608,7 +598,13 @@ nav .icon {
     text-align: center;
   }
   .landing-page {
-    height: 100vh !important;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    padding: 250px 0;
+  }
+  .inline {
+    width: 80%;
   }
   .ticket-sale {
     width: 100% !important;
@@ -638,15 +634,15 @@ nav .icon {
     font-size: 18px !important;
     color: #ec5242;
   }
-  .ticket-sale .ticket-group {
+  .ticket-group {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -654,26 +650,26 @@ nav .icon {
         -ms-flex-align: center;
             align-items: center;
   }
-  .ticket-sale .ticket-group table {
-    width: 80% !important;
+  .ticket-group table {
+    width: 100% !important;
     margin: 20px auto;
   }
-  .landing-page {
-    padding: 30px 10px;
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
+  .about-text {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    margin: 10px 30px !important;
   }
-  .landing-page p {
+  .contact {
     text-align: center;
   }
   .landing-page-text {
-    width: 60% !important;
+    width: 80% !important;
     text-align: justify;
     line-height: 1.7;
   }
   .landing-page-text p:nth-child(1) {
-    font-size: 32px !important;
+    font-size: 64px;
     font-family: "Playfair Display", serif;
     font-weight: bold;
     margin: 0;
@@ -696,6 +692,24 @@ nav .icon {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1020px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .landing-page {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    padding: 200px 50px;
+  }
+  .landing-page .about-text {
+    margin-top: 100px;
+  }
   .sponsors {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -758,39 +772,8 @@ nav .icon {
         grid-template-columns: 1fr;
     text-align: center;
   }
-  .landing-page {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .ticket-sale {
+  .ticket-table {
     width: 100% !important;
-    padding: 0;
-    margin: 0;
-  }
-  .ticket-sale table {
-    width: 600px !important;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-    background-color: #fff;
-  }
-  .ticket-sale table td,
-  .ticket-sale table th {
-    border: 1px solid #ccc;
-    text-align: center;
-    padding: 10px;
-  }
-  .ticket-sale table tr:nth-child(1) {
-    background-color: #d3d3d3;
-  }
-  .ticket-sale table tr > td {
-    white-space: nowrap;
-    padding: 10px;
-  }
-  .ticket-sale table tr > td p {
-    font-size: 18px !important;
-    color: #ec5242;
   }
   .landing-page-text {
     width: 60% !important;
@@ -805,6 +788,9 @@ nav .icon {
     padding: 0;
     text-align: center;
   }
+  .main-program h2 {
+    padding: 20px 0;
+  }
   .event-carousel {
     display: -ms-grid;
     display: grid;
@@ -816,52 +802,29 @@ nav .icon {
   }
 }
 
-@media only screen and (max-width: 1023px) {
-  li:hover {
-    background-color: red !important;
-  }
+@media only screen and (max-width: 765px) {
   .navbar {
-    width: 100%;
-    height: 60px;
-  }
-  .navlinks {
-    position: fixed;
-    width: 100%;
-    top: 60px;
-    background-color: #ccc;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute !important;
+    top: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: #fff !important;
+  }
+  .navbar h4 {
     padding: 0;
-    left: -1040px;
-    -webkit-transition: .5s;
-    transition: .5s;
-  }
-  .navlinks li {
-    padding: 20px 5px !important;
-  }
-  .active {
-    left: 0 !important;
-  }
-  .icon {
-    display: block !important;
-    padding: 0 30px;
-    color: #000;
-  }
-  .show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
