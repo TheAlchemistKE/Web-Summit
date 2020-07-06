@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="../assets/scss/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <header class="landing-page">
+    <nav class="navbar">
         <nav class="navbar">
-            <i class="fas fa-bars menu"></i>
-            <h4>Web Summit</h4>
+            <label class="logo">Logo</label>
             <ul class="navlinks">
                 <li class="navlink"><a href="../index.html">Home</a></li>
-                <li class="navlink active"><a href="./html/tickets.html">About</a></li>
-                <li class="navlink"><a href="./tickets.html">Tickets</a></li>
+                <li class="navlink active"><a href="about.html">About</a></li>
+                <li class="navlink"><a href="tickets.html">Tickets</a></li>
             </ul>
+            <div class="icon">
+                <i class="fas fa-bars menu"></i>
+            </div>
         </nav>
+    </nav>
+    <section class="landing-page">
         <div class="landing-page-text about-text">
             <h1 class="heading">About Web Summit</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quo, voluptas consequatur libero ducimus enim quos unde nihil, perferendis ad saepe laborum. Porro tenetur, quaerat quas obcaecati excepturi nihil aut!</p>
         </div>
         <p class="contact">Please Contact Us via <a href="#">example@example.com</a></p>
         
-    </header>
+    </section>
     <section class="about-us">
         <h2 class="section-title">Web Summit Global Tech Conference</h2>
         <div class="content">
@@ -68,6 +72,13 @@
 
         </div>
     </footer>
-    <script src="../assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.icon').click(function(){
+                $('.navlinks').toggleClass('active')
+            })
+        })
+    </script>
 </body>
 </html>

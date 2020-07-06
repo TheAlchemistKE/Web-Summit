@@ -27,10 +27,6 @@ body {
   display: none;
 }
 
-.menu {
-  display: none;
-}
-
 .section-title {
   font-family: $font-secondary;
   text-decoration: underline;
@@ -155,12 +151,59 @@ table {
     }
   }
 }
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;  
+}
+a:hover {
+  color: slateblue;
+  text-decoration: underline;
+}
+
+label {
+  font-size: 20px;
+  padding: 0 10px;
+}
+nav {
+  color: #fff;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34495e;
+
+  .navlinks{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      li {
+          padding: 0 20px;;
+          a {
+              white-space: nowrap;
+          }
+
+      }
+      
+  }
+  .icon {
+      display: none;
+  }
+}
 
 .landing-page {
   background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url(../images/background.jpg) center center;
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  position: relative;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,52 +219,6 @@ table {
 
     a:hover {
       color: $color-secondary;
-    }
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 10vh;
-    background-color: #fff;
-
-    h4 {
-      font-family: $font-secondary;
-      color: $color-secondary;
-      font-size: 22px;
-      padding-left: 30px;
-    }
-
-    .navlinks {
-      display: flex;
-      justify-content: space-evenly;
-      list-style-type: none;
-      padding: 0 20px;
-
-      .navlink {
-        padding: 5px 0;
-
-        a {
-          padding: 10px 20px;
-          font-family: $font-secondary;
-          text-decoration: none;
-          color: $color-primary;
-          font-weight: bold;
-        }
-
-        a:hover {
-          color: $color-secondary;
-          font-weight: bold;
-        }
-      }
-
-      .active {
-        border: 1px solid $color-primary;
-      }
     }
   }
 
@@ -245,9 +242,6 @@ table {
     background-color: #fff;
     padding: 20px 40px;
   }
-}
-.heading {
-  
 }
 
 .featured-speakers {
@@ -437,67 +431,6 @@ table {
     overflow-x: hidden;
   }
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative !important;
-    top: 0;
-    width: 100%;
-    height: 10vh !important;
-    background-color: #fff;
-    white-space: nowrap;
-    margin-bottom: 30px;
-    padding: 5px;
-
-    .menu {
-      color: $text-color;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 32px;
-      display: inline-block;
-    }
-
-    h4 {
-      font-family: $font-secondary;
-      color: $color-secondary;
-      font-size: 22px;
-      padding-left: 30px;
-    }
-
-    .navlinks {
-      background-color: $color-white;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      top: 70px;
-      text-align: center;
-
-      .navlink {
-        padding: 5px 0;
-        display: block;
-
-        a {
-          padding: 10px 20px;
-          font-family: $font-secondary;
-          text-decoration: none;
-          color: $color-primary;
-          font-weight: bold;
-        }
-
-        a:hover {
-          color: $color-secondary;
-          font-weight: bold;
-        }
-      }
-
-      .active {
-        border: 1px solid $color-primary;
-      }
-    }
-  }
-
   .sponsors {
     height: fit-content;
   }
@@ -601,14 +534,22 @@ table {
       }
     }
   }
+  .landing-page {
+    padding: 30px 10px;
+    height: fit-content !important;
 
+    p {
+      text-align: center;
+    }
+  }
   .landing-page-text {
-    width: 100% !important;
+    width: 60% !important;
     text-align: justify;
     line-height: 1.7;
 
+
     p:nth-child(1) {
-      font-size: 64px;
+      font-size: 32px !important;
       font-family: $font-secondary;
       font-weight: bold;
       margin: 0;
@@ -633,66 +574,6 @@ table {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1020px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative !important;
-    top: 0;
-    width: 100%;
-    height: 20vh !important;
-    background-color: #fff;
-    white-space: nowrap;
-    margin-bottom: 30px;
-    padding: 5px;
-
-    .menu {
-      color: $text-color;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 32px;
-      display: inline-block;
-    }
-
-    h4 {
-      font-family: $font-secondary;
-      color: $color-secondary;
-      font-size: 22px;
-      padding-left: 30px;
-    }
-
-    .navlinks {
-      background-color: $color-white;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      top: 70px;
-      text-align: center;
-
-      .navlink {
-        padding: 5px 0;
-        display: block;
-
-        a {
-          padding: 10px 20px;
-          font-family: $font-secondary;
-          text-decoration: none;
-          color: $color-primary;
-          font-weight: bold;
-        }
-
-        a:hover {
-          color: $color-secondary;
-          font-weight: bold;
-        }
-      }
-
-      .active {
-        border: 1px solid $color-primary;
-      }
-    }
-  }
 
   .sponsors {
     height: fit-content;
@@ -808,5 +689,47 @@ table {
 
   .ticket-group {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  li:hover {
+      background-color: red !important;
+  }
+  .navbar {
+      width: 100%;
+      height: 60px;
+  }
+
+  .navlinks {
+      position: fixed;
+      width: 100%;
+      top: 60px;
+      background-color: #ccc;
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      left: -1040px;
+      transition: .5s;
+
+      li {
+          padding: 20px 5px !important;
+
+      }
+     
+  }
+  .active {
+      left: 0 !important;
+  }
+  .icon {
+      display: block !important;
+      padding: 0 30px;
+      color: #000;
+  }
+  .show {
+      display: flex;
   }
 }
