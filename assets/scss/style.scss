@@ -155,6 +155,52 @@ table {
     }
   }
 }
+
+.landing-page {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url(../images/background.jpg) center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact {
+    font-size: 20px;
+
+    a {
+      text-decoration: underline;
+      color: $color-primary;
+    }
+
+    a:hover {
+      color: $color-secondary;
+    }
+  }
+
+  .landing-page-text {
+    width: 60%;
+    text-align: justify;
+    line-height: 1.7;
+
+    h1 {
+      font-size: 64px;
+      font-family: $font-secondary !important;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .about-text {
+    border: 1px solid $color-primary;
+    background-color: #fff;
+    padding: 20px 40px;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -198,50 +244,6 @@ table {
     .active {
       border: 1px solid $color-primary;
     }
-  }
-}
-.landing-page {
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url(../images/background.jpg) center center;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .contact {
-    font-size: 20px;
-
-    a {
-      text-decoration: underline;
-      color: $color-primary;
-    }
-
-    a:hover {
-      color: $color-secondary;
-    }
-  }
-
-  .landing-page-text {
-    width: 60%;
-    text-align: justify;
-    line-height: 1.7;
-
-    h1 {
-      font-size: 64px;
-      font-family: $font-secondary !important;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-  }
-
-  .about-text {
-    border: 1px solid $color-primary;
-    background-color: #fff;
-    padding: 20px 40px;
   }
 }
 
@@ -488,12 +490,12 @@ table {
   .landing-page {
     height: fit-content !important;
     padding: 250px 0;
-    
   }
 
   .inline {
     width: 80%;
   }
+
   .ticket-sale {
     width: 100% !important;
     padding: 0;
@@ -526,8 +528,8 @@ table {
         }
       }
     }
-
   }
+
   .ticket-group {
     width: 100%;
     display: flex !important;
@@ -538,16 +540,18 @@ table {
     table {
       width: 100% !important;
       margin: 20px auto;
-
     }
   }
+
   .about-text {
     width: fit-content !important;
     margin: 10px 30px !important;
   }
+
   .contact {
     text-align: center;
   }
+
   .landing-page-text {
     width: 80% !important;
     text-align: justify;
@@ -583,6 +587,7 @@ table {
     display: flex;
     flex-direction: column;
   }
+
   .landing-page {
     height: fit-content !important;
     padding: 200px 50px;
@@ -591,6 +596,7 @@ table {
       margin-top: 100px;
     }
   }
+
   .sponsors {
     height: fit-content;
   }
@@ -608,7 +614,6 @@ table {
     padding: 20px 0;
   }
 
-  
   .main-program,
   .featured-speakers {
     height: fit-content;
@@ -644,6 +649,7 @@ table {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .ticket-table {
     width: 100% !important;
   }
@@ -662,6 +668,7 @@ table {
       text-align: center;
     }
   }
+
   .main-program {
     h2 {
       padding: 20px 0;
@@ -693,5 +700,4 @@ table {
       padding: 0;
     }
   }
-
 }
