@@ -41,12 +41,12 @@ body {
 .main-program {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: fit-content;
   justify-content: center;
   align-items: center;
   background-color: $color-primary;
   color: $color-tertiary;
-  padding: 40px;
+  padding: 60px 40px !important;
 
   h2 {
     margin-top: -40px;
@@ -60,7 +60,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
 
-    .card {
+    .program-card {
       padding: 20px 40px;
       border: 1px solid #ccc;
       text-align: center;
@@ -75,7 +75,7 @@ body {
       }
     }
 
-    .card:hover {
+    .program-card:hover {
       background-color: $color-white;
       color: $color-primary;
     }
@@ -201,50 +201,28 @@ table {
   }
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #fff;
+nav {
+  background: $color-white;
+}
 
-  h4 {
-    font-family: $font-secondary;
-    color: $color-secondary;
-    font-size: 22px;
-    padding-left: 30px;
-  }
+.navbar-brand {
+  color: $color-secondary !important;
+  font-family: $font-secondary;
+  font-weight: bold;
+}
 
-  .navlinks {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    padding: 0 20px;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
 
-    .navlink {
-      padding: 5px 0;
+.nav-link {
+  color: $color-primary !important;
+  font-size: 17px;
+}
 
-      a {
-        padding: 10px 20px;
-        font-family: $font-secondary;
-        text-decoration: none;
-        color: $color-primary;
-        font-weight: bold;
-      }
-
-      a:hover {
-        color: $color-secondary;
-        font-weight: bold;
-      }
-    }
-
-    .active {
-      border: 1px solid $color-primary;
-    }
-  }
+.nav-link:hover {
+  color: $color-secondary !important;
+  text-decoration: underline !important;
 }
 
 .featured-speakers {
@@ -460,7 +438,7 @@ table {
       display: grid;
       grid-template-columns: 1fr;
 
-      .card {
+      .program-card {
         margin: 10px 0;
       }
     }
@@ -682,22 +660,5 @@ table {
 
   .ticket-group {
     display: none;
-  }
-}
-
-@media only screen and (max-width: 765px) {
-  .navbar {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute !important;
-    top: 0;
-    height: fit-content;
-    background-color: $color-white !important;
-
-    h4 {
-      padding: 0;
-    }
   }
 }
