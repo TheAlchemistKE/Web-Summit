@@ -31,7 +31,7 @@ This Design was inspired by Cindy Shin.
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/KelynPNjeri/Web-Summit/9f8d778b3ed4cc9bd73501bae5891e23dacd5f0f/index.html)
+[Live Demo Link](https://rawcdn.githack.com/KelynPNjeri/Web-Summit/33a7c38afd87bbee48d384921c8223b90c4593ea/index.html)
 
 ## Getting Started
 
