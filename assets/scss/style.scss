@@ -19,10 +19,6 @@ body {
   color: $text-color;
 }
 
-.show {
-  display: none !important;
-}
-
 .ticket-group {
   display: none;
 }
@@ -407,9 +403,15 @@ nav {
   }
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+
+  .collapse.dont-collapse-sm {
+    display: block;
+    height: auto !important;
+    visibility: visible;
   }
 
   .sponsors {

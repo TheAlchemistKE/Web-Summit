@@ -7,10 +7,6 @@ body {
   color: #000;
 }
 
-.show {
-  display: none !important;
-}
-
 .ticket-group {
   display: none;
 }
@@ -35,7 +31,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 80vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -44,7 +42,7 @@ body {
           align-items: center;
   background-color: #272a31;
   color: #d3d3d3;
-  padding: 40px;
+  padding: 60px 40px !important;
 }
 
 .main-program h2 {
@@ -237,12 +235,6 @@ nav {
 .nav-link:hover {
   color: #ec5242 !important;
   text-decoration: underline !important;
-}
-
-.main-program {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .featured-speakers {
@@ -505,9 +497,14 @@ nav {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+  .collapse.dont-collapse-sm {
+    display: block;
+    height: auto !important;
+    visibility: visible;
   }
   .sponsors {
     height: -webkit-fit-content;
