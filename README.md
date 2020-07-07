@@ -1,16 +1,26 @@
 # Web-Summit
+
 ![Linters](https://github.com/KelynPNjeri/Web-Summit/workflows/Linters/badge.svg?branch=develop)
 
-> This is the website for the fictitious Web Summit Conference that will happen this commit July.
+> This is the website for the fictitious Web Summit Conference that will happen
+> this commit July.
 
 ![Web Summit Landing Page](./assets/images/desktop.png)
 
 This website contains the following pages:
-- Landing Page: The landing page gives more information bout the Web Summit such as the main program and the featured speakers also known as the speakers who are going to be speaking at the talk.
 
-- About Page: The about page contains the information about the `Web Summit` conference and also links that would lead to pictures and slides about the past Web Summits.
+- Landing Page: The landing page gives more information bout the Web Summit such
+  as the main program and the featured speakers also known as the speakers who
+  are going to be speaking at the talk.
 
-- Ticket Page: The ticket page contains a table that contains ticket prices depending on the category of different users. On larger screens it is one big table, however, in smaller screens the table is split into two different tables.
+- About Page: The about page contains the information about the `Web Summit`
+  conference and also links that would lead to pictures and slides about the
+  past Web Summits.
+
+- Ticket Page: The ticket page contains a table that contains ticket prices
+  depending on the category of different users. On larger screens it is one big
+  table, however, in smaller screens the table is split into two different
+  tables.
 
 This Design was inspired by Cindy Shin.
 
@@ -21,22 +31,22 @@ This Design was inspired by Cindy Shin.
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/KelynPNjeri/Web-Summit/94937c4e91a39f3d756902a1d4d32d8470763bfd/index.html)
-
+[Live Demo Link](https://rawcdn.githack.com/KelynPNjeri/Web-Summit/9f8d778b3ed4cc9bd73501bae5891e23dacd5f0f/index.html)
 
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
+
 - Web Browser
 
 ### Setup
-- To set up, either download or clone this project from `https://github.com/KelynPNjeri/Web-Summit.git`
+
+- To set up, either download or clone this project from
+  `https://github.com/KelynPNjeri/Web-Summit.git`
 
 - Once downloaded, to view the project, run `index.html` in your web browser.
-
-
 
 ## Authors
 
@@ -60,7 +70,6 @@ Give a ⭐️ if you like this project!
 
 - Team Ocicats.
 - Cindy Shin's Behance Design of the Conference page.
-
 
 ## 📝 License
 
